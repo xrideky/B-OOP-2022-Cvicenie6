@@ -12,7 +12,7 @@ public class Main {
         okno.setResizable(true);
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        okno.add(new MyCanvas());
+        okno.add(new MyPanel());
     }
 
 }
