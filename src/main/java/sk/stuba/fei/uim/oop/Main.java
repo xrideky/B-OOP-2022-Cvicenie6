@@ -9,16 +9,26 @@ public class Main {
         }
 
         System.out.println("---------------");
-        System.out.println(SvetoveStrany.valueOf("SEVER"));
+        checkSever(SvetoveStrany.fromString("SEVER"));
         checkSever(strana);
-        System.out.println(SvetoveStrany.valueOf("sever"));
+        checkSever(SvetoveStrany.fromString("sever"));
+        checkSever(strana);
+
+        switch (strana){
+            case SEVER:
+                System.out.println("S");
+                break;
+            default:
+                System.out.println("nie je S");
+        }
     }
 
     public static void checkSever(SvetoveStrany s){
-        if(s.equals(SvetoveStrany.SEVER)){
+        if(s.isJeSever()){
             System.out.println("je to Sever");
         } else{
             System.out.println("nie je to Sever");
         }
     }
+
 }
