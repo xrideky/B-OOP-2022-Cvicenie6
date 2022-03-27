@@ -11,17 +11,19 @@ public class Main {
         okno.setSize(300,300);
         okno.setResizable(true);
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        okno.setLayout(new GridLayout(3,4));  //GRID LAYOUT
-
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(2,2));
-        panel.setBackground(Color.CYAN);
+        okno.setLayout(new GridLayout(3,4));
         okno.getContentPane().setBackground(new Color(190,180,50));
 
-        for(int i=0;i<4;i++){
-            panel.add(new JLabel("Panel " + i));
-        }
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout(5,5));
 
+        panel.add(new JLabel("TOP"),BorderLayout.PAGE_START);
+        panel.add(new JLabel("END"),BorderLayout.PAGE_END);
+        panel.add(new JLabel("CENTER"),BorderLayout.CENTER);
+        panel.add(new JLabel("LEFT"),BorderLayout.LINE_START);
+        panel.add(new JLabel("RIGHT"),BorderLayout.LINE_END);
+
+        panel.setBackground(Color.CYAN);
 
         JLabel label = new JLabel("Hello world");
         okno.add(label);
@@ -34,10 +36,7 @@ public class Main {
             } else{
                 okno.add(new JLabel("Hello " + i));
             }
-
         }
-
-
     }
 
 }
