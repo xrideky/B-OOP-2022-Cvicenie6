@@ -16,14 +16,16 @@ public class Main {
 
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout(5,5));
+        panel.setBackground(Color.CYAN);
 
         panel.add(new JLabel("TOP"),BorderLayout.PAGE_START);
         panel.add(new JLabel("END"),BorderLayout.PAGE_END);
-        panel.add(new JLabel("CENTER"),BorderLayout.CENTER);
         panel.add(new JLabel("LEFT"),BorderLayout.LINE_START);
         panel.add(new JLabel("RIGHT"),BorderLayout.LINE_END);
+        //zarovnanie
+        JLabel lapelpanel = new JLabel("CENTER",SwingConstants.CENTER);
+        panel.add(lapelpanel, BorderLayout.CENTER);
 
-        panel.setBackground(Color.CYAN);
 
         JLabel label = new JLabel("Hello world");
         okno.add(label);
