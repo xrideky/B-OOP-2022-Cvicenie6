@@ -12,7 +12,13 @@ public class Main {
         okno.setResizable(true);
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        okno.add(new MyPanel());
+        JButton button = new JButton("klikni");
+        button.addActionListener(new MyPanel());
+        okno.add(button);
+
+        //okno.add(new MyCanvas());
+        //okno.add(new MyPanel());
+
     }
 
 }
